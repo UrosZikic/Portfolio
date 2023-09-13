@@ -1,0 +1,84 @@
+.home {
+  width: 100%;
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 30rem 0rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.home h1,
+.home p,
+.home a {
+  text-align: center;
+  transform: translateY(20%); }
+
+.home h1 {
+  font-size: 8rem;
+  font-weight: 500;
+  animation: moveUp 1s forwards; }
+
+.home p {
+  font-size: 4rem;
+  animation: moveUp 1s forwards 0.5s; }
+
+.home a {
+  font-size: 4rem;
+  width: 0%;
+  max-width: 24rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: gray;
+  color: white;
+  transform: translateY(20%);
+  animation: moveUp 1s forwards 0.5s;
+  animation: loadUp 6s forwards 0.5s; }
+
+@keyframes loadUp {
+  from {
+    width: 0%; }
+  to {
+    width: 100%; } }
+
+@keyframes moveUp {
+  from {
+    transform: translateY(20%);
+    /* Start from translateY(20%) */ }
+  to {
+    transform: translateY(0%);
+    /* End at translateY(0%) */ } }
+
+@media only screen and (max-width: 1180px) {
+  .home h1 {
+    font-size: 6.5rem; }
+  .home p {
+    font-size: 3rem; }
+  .home a {
+    font-size: 3rem; } }
+
+@media only screen and (max-width: 960px) {
+  .home {
+    padding: 25rem 0rem; }
+    .home h1 {
+      font-size: 4.5rem; }
+    .home p {
+      font-size: 2rem; } }
+
+@media only screen and (max-width: 665px) {
+  .home {
+    padding: 10rem 0rem; }
+  .home h1 {
+    font-size: 3rem; }
+  .home a {
+    font-size: 2rem;
+    max-width: 18rem; } }
+
+@media only screen and (max-width: 445px) {
+  .home {
+    padding: 10rem 0rem; }
+  .home h1 {
+    font-size: 2rem; }
+  .home p {
+    font-size: 1.2rem; }
+  .home a {
+    max-width: 12rem; } }

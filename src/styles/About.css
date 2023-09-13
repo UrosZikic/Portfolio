@@ -1,0 +1,50 @@
+.about {
+  width: 100%;
+  max-width: 130rem;
+  margin: 0 auto;
+  z-index: 100; }
+  .about .story {
+    border: 1px solid black; }
+    .about .story h3 {
+      padding: 1rem 4rem;
+      font-size: 3rem;
+      text-transform: uppercase; }
+    .about .story p {
+      padding: 1rem 4rem;
+      font-size: 1.8rem; }
+    .about .story .upper-part {
+      display: flex;
+      justify-content: space-around;
+      align-items: center; }
+      .about .story .upper-part button {
+        width: 100%;
+        max-width: 4rem;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        transition: all 0.5s; }
+        .about .story .upper-part button div {
+          width: 100%;
+          height: 1px;
+          border-top: 3px solid black;
+          transition: all 0.5s; }
+        .about .story .upper-part button .menu-first--animation {
+          transform: rotate(45deg); }
+        .about .story .upper-part button .menu-second--animation {
+          opacity: 0; }
+        .about .story .upper-part button .menu-third--animation {
+          transform: translateY(-25px) rotate(-45deg); }
+  .about .skill-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 2rem;
+    padding: 2rem; }
+    .about .skill-list li {
+      font-size: 2rem;
+      text-align: center; }
+
+.about .story p {
+  padding: 4rem; }

@@ -42,11 +42,11 @@ export default function Navbar() {
       <div
         className="menu"
         style={{
-          zIndex: isOpen ? 100 : 0,
+          zIndex: isOpen ? 100 : -10,
           opacity: isOpen ? 1 : 0,
         }}
       >
-        <Menu isOpen={isOpen} />
+        <Menu isOpen={isOpen} isLargeScreen={isLargeScreen} />
       </div>
     </header>
   );
@@ -54,7 +54,7 @@ export default function Navbar() {
 
 function NavLinks(props) {
   return (
-    <li>
+    <li className="link-item">
       <a
         href={props.link}
         className={!props.isDisabled ? "disabled-button" : ""}
@@ -67,6 +67,7 @@ function NavLinks(props) {
 }
 
 function MenuToggle(props) {
+  if (props.isLargeScreen) props.setIsOpen(false);
   return (
     props.isLargeScreen === false && (
       <button
@@ -84,11 +85,13 @@ function MenuToggle(props) {
 
 function Menu(props) {
   return (
-    <ul>
-      <NavLinks link="/" children="Home" isDisabled={props.isOpen} />
-      <NavLinks link="/" children="About" isDisabled={props.isOpen} />
-      <NavLinks link="/" children="Projects" isDisabled={props.isOpen} />
-      <NavLinks link="/" children="Contact" isDisabled={props.isOpen} />
-    </ul>
+    props.isLargeScreen === false && (
+      <ul style={{ display: props.isOpen ? "flex" : "none" }}>
+        <NavLinks link="/" children="Home" isDisabled={props.isOpen} />
+        <NavLinks link="/" children="About" isDisabled={props.isOpen} />
+        <NavLinks link="/" children="Projects" isDisabled={props.isOpen} />
+        <NavLinks link="/" children="Contact" isDisabled={props.isOpen} />
+      </ul>
+    )
   );
 }
