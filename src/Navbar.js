@@ -66,20 +66,39 @@ function NavLinks(props) {
   );
 }
 
+// function MenuToggle(props) {
+//   if (props.isLargeScreen) props.setIsOpen(false);
+//   return (
+//     props.isLargeScreen === false && (
+//       <button
+//         className="toggle-menu"
+//         style={{ alignSelf: props.isOpen ? "flex-end" : "center" }}
+//         onClick={() => props.setIsOpen(!props.isOpen)}
+//       >
+//         <div className={props.isOpen ? "menu-first--animation" : ""}></div>
+//         <div className={props.isOpen ? "menu-second--animation" : ""}></div>
+//         <div className={props.isOpen ? "menu-third--animation" : ""}></div>
+//       </button>
+//     )
+//   );
+// }
 function MenuToggle(props) {
-  if (props.isLargeScreen) props.setIsOpen(false);
+  // If it's a large screen, don't render the button
+  if (props.isLargeScreen) return null;
+
+  // Determine the button's alignment based on the `isOpen` state
+  const buttonAlignment = props.isOpen ? "flex-end" : "center";
+
   return (
-    props.isLargeScreen === false && (
-      <button
-        className="toggle-menu"
-        style={{ alignSelf: props.isOpen ? "flex-end" : "center" }}
-        onClick={() => props.setIsOpen(!props.isOpen)}
-      >
-        <div className={props.isOpen ? "menu-first--animation" : ""}></div>
-        <div className={props.isOpen ? "menu-second--animation" : ""}></div>
-        <div className={props.isOpen ? "menu-third--animation" : ""}></div>
-      </button>
-    )
+    <button
+      className="toggle-menu"
+      style={{ alignSelf: buttonAlignment }}
+      onClick={() => props.setIsOpen(!props.isOpen)}
+    >
+      <div className={props.isOpen ? "menu-first--animation" : ""}></div>
+      <div className={props.isOpen ? "menu-second--animation" : ""}></div>
+      <div className={props.isOpen ? "menu-third--animation" : ""}></div>
+    </button>
   );
 }
 

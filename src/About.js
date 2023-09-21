@@ -1,26 +1,33 @@
 // import css
-import { useState } from "react";
 import "./styles/About.css";
+// import react
+import React from "react";
+// fontawesome
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHtml5 } from "@fortawesome/free-brands-svg-icons";
+import { faCss3 } from "@fortawesome/free-brands-svg-icons";
+import { faSass } from "@fortawesome/free-brands-svg-icons";
+import { faBootstrap } from "@fortawesome/free-brands-svg-icons";
+import { faJs } from "@fortawesome/free-brands-svg-icons";
+import { faReact } from "@fortawesome/free-brands-svg-icons";
+import { faPhp } from "@fortawesome/free-brands-svg-icons";
+import { faGitAlt } from "@fortawesome/free-brands-svg-icons";
+import { faDatabase } from "@fortawesome/free-solid-svg-icons";
 
 export default function About() {
   return (
     <section className="about">
-      <Story />
+      <Description />
       <Skills />
     </section>
   );
 }
 
-function Story() {
-  const [storyOpen, setStoryOpen] = useState(false);
+function Description() {
   return (
-    <div className="story">
-      <div className="upper-part">
-        <h3>About me:</h3>
-        <ToggleButton storyOpen={storyOpen} setStoryOpen={setStoryOpen} />
-      </div>
-
-      <p style={{ display: storyOpen ? "block" : "none" }}>
+    <div className="description">
+      <h2>About me:</h2>
+      <p>
         Hello! I'm a web developer from a small Serbian town with a background
         in English. I graduated in 2022 and began my web development journey by
         mastering HTML, CSS, and JavaScript, eventually diving into TypeScript
@@ -36,45 +43,35 @@ function Story() {
 }
 
 function Skills() {
-  const [storyOpen, setStoryOpen] = useState(false);
   return (
-    <div className="story">
-      <div className="upper-part">
-        <h3 style={{ marginLeft: "6rem" }}>Skills:</h3>
-        <ToggleButton storyOpen={storyOpen} setStoryOpen={setStoryOpen} />
-      </div>
-      <ul
-        className="skill-list"
-        style={{
-          display: storyOpen ? "grid" : "none",
-        }}
-      >
-        <li>HTML</li>
-        <li>CSS/SASS</li>
-        <li>Bootstrap</li>
-        <li>JavaScript/TS</li>
-        <li>React</li>
-        <li>PHP</li>
-        <li>Laravel</li>
-        <li>SQL</li>
-        <li>GIT</li>
-      </ul>
-    </div>
-  );
-}
-
-function ToggleButton(props) {
-  return (
-    <button
-      style={{
-        alignSelf: props.storyOpen ? "flex-end" : "center",
-        transform: props.storyOpen ? "translateY(-8px)" : "translateY(0px)",
-      }}
-      onClick={() => props.setStoryOpen(!props.storyOpen)}
-    >
-      <div className={props.storyOpen ? "menu-first--animation" : ""}></div>
-      <div className={props.storyOpen ? "menu-second--animation" : ""}></div>
-      <div className={props.storyOpen ? "menu-third--animation" : ""}></div>
-    </button>
+    <ul className="skills">
+      <li>
+        <FontAwesomeIcon icon={faHtml5} />
+      </li>
+      <li>
+        <FontAwesomeIcon icon={faCss3} />
+      </li>
+      <li>
+        <FontAwesomeIcon icon={faSass} />
+      </li>
+      <li>
+        <FontAwesomeIcon icon={faBootstrap} />
+      </li>
+      <li>
+        <FontAwesomeIcon icon={faJs} />
+      </li>
+      <li>
+        <FontAwesomeIcon icon={faReact} />
+      </li>
+      <li>
+        <FontAwesomeIcon icon={faGitAlt} />
+      </li>
+      <li>
+        <FontAwesomeIcon icon={faPhp} />
+      </li>
+      <li>
+        <FontAwesomeIcon icon={faDatabase} />
+      </li>
+    </ul>
   );
 }

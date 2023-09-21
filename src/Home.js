@@ -7,7 +7,7 @@ export default function Home() {
     <section className="home">
       <h1>Aspiring Front-End Developer</h1>
       <p>Passionate about creating web applications that make a difference</p>
-      <a href="/">Projects</a>
+      <a href="#projects">Projects</a>
     </section>
   );
 }
