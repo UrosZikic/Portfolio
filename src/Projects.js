@@ -5,6 +5,7 @@ import projectImage from "./images/project-1.png";
 import projectImage2 from "./images/project-2.jpg";
 import projectImage3 from "./images/project-3.jpg";
 import projectImage4 from "./images/project-4.jpg";
+import projectImage5 from "./images/project-4.png";
 // import styles
 import "./styles/Projects.css";
 
@@ -58,6 +59,17 @@ export default function Projects() {
         }
         git={"https://github.com/UrosZikic/OmniPhones"}
         web={"https://uroszikic.github.io/OmniPhones/"}
+        position={"bottom"}
+      />
+      <Project
+        src={projectImage5}
+        alt={"Statistics Website"}
+        head={"EU Population Info"}
+        desc={
+          "This website provides general info on any European country as well as a table data containing info about the country's population, fertility, mortality and so on.. This website was built with JS API with PHP and SQL on the backend."
+        }
+        git={"https://github.com/UrosZikic/Euro-Stats"}
+        // web={"https://uroszikic.github.io/OmniPhones/"}
         position={"bottom"}
       />
     </section>
