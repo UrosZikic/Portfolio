@@ -23,16 +23,39 @@ export default function Navbar() {
     };
   }, []);
 
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <header>
-      <a href="/" className="logo">
+      <a href="#home" className="logo">
         uz
       </a>
       <ul style={{ display: isLargeScreen ? "flex" : "none" }}>
-        <NavLinks link="/" children="Home" />
-        <NavLinks link="/" children="About" />
-        <NavLinks link="/" children="Projects" />
-        <NavLinks link="/" children="Contact" />
+        <NavLinks
+          link="#home"
+          children="Home"
+          onClick={() => scrollToSection("home")}
+        />
+        <NavLinks
+          link="#about"
+          children="About"
+          onClick={() => scrollToSection("about")}
+        />
+        <NavLinks
+          link="#projects"
+          children="Projects"
+          onClick={() => scrollToSection("projects")}
+        />
+        <NavLinks
+          link="#contact"
+          children="Contact"
+          onClick={() => scrollToSection("contact")}
+        />
       </ul>
       <MenuToggle
         isLargeScreen={isLargeScreen}
@@ -44,6 +67,7 @@ export default function Navbar() {
         style={{
           zIndex: isOpen ? 100 : -10,
           opacity: isOpen ? 1 : 0,
+          visibility: isOpen ? "visible" : "hidden",
         }}
       >
         <Menu isOpen={isOpen} isLargeScreen={isLargeScreen} />
@@ -57,7 +81,8 @@ function NavLinks(props) {
     <li className="link-item">
       <a
         href={props.link}
-        className={!props.isDisabled ? "disabled-button" : ""}
+        // className={!props.isDisabled ? "disabled-button" : ""}
+        onClick={props.onClick}
       >
         {props.children}
       </a>
@@ -66,22 +91,6 @@ function NavLinks(props) {
   );
 }
 
-// function MenuToggle(props) {
-//   if (props.isLargeScreen) props.setIsOpen(false);
-//   return (
-//     props.isLargeScreen === false && (
-//       <button
-//         className="toggle-menu"
-//         style={{ alignSelf: props.isOpen ? "flex-end" : "center" }}
-//         onClick={() => props.setIsOpen(!props.isOpen)}
-//       >
-//         <div className={props.isOpen ? "menu-first--animation" : ""}></div>
-//         <div className={props.isOpen ? "menu-second--animation" : ""}></div>
-//         <div className={props.isOpen ? "menu-third--animation" : ""}></div>
-//       </button>
-//     )
-//   );
-// }
 function MenuToggle(props) {
   // If it's a large screen, don't render the button
   if (props.isLargeScreen) return null;
@@ -92,6 +101,7 @@ function MenuToggle(props) {
   return (
     <button
       className="toggle-menu"
+      id="toggle"
       style={{ alignSelf: buttonAlignment }}
       onClick={() => props.setIsOpen(!props.isOpen)}
     >
@@ -103,13 +113,38 @@ function MenuToggle(props) {
 }
 
 function Menu(props) {
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    const toggle = document.getElementById("toggle");
+    if (section) {
+      toggle.click();
+      section.scrollIntoView({ behavior: "auto" });
+    }
+  };
+
   return (
     props.isLargeScreen === false && (
       <ul style={{ display: props.isOpen ? "flex" : "none" }}>
-        <NavLinks link="/" children="Home" isDisabled={props.isOpen} />
-        <NavLinks link="/" children="About" isDisabled={props.isOpen} />
-        <NavLinks link="/" children="Projects" isDisabled={props.isOpen} />
-        <NavLinks link="/" children="Contact" isDisabled={props.isOpen} />
+        <NavLinks
+          link="#home"
+          children="Home"
+          onClick={() => scrollToSection("home")}
+        />
+        <NavLinks
+          link="#about"
+          children="About"
+          onClick={() => scrollToSection("about")}
+        />
+        <NavLinks
+          link="#projects"
+          children="Projects"
+          onClick={() => scrollToSection("projects")}
+        />
+        <NavLinks
+          link="#contact"
+          children="Contact"
+          onClick={() => scrollToSection("contact")}
+        />
       </ul>
     )
   );

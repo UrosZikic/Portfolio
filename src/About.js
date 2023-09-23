@@ -26,7 +26,7 @@ export default function About() {
 function Description() {
   return (
     <div className="description">
-      <h2>About me:</h2>
+      <h2 id="about">About me:</h2>
       <p>
         Hello! I'm a web developer from a small Serbian town with a background
         in English. I graduated in 2022 and began my web development journey by

@@ -11,7 +11,7 @@ import "./styles/Projects.css";
 
 export default function Projects() {
   return (
-    <section className="projects">
+    <section className="projects" id="projects">
       <h2>PROJECTS</h2>
       <p>
         Here you will find some of the personal and clients projects that I
