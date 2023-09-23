@@ -27,7 +27,7 @@ export default function ContactUs() {
   };
 
   return (
-    <section className="contact">
+    <section className="contact" id="contact">
       <h2>Let's Connect!</h2>
       <form ref={form} onSubmit={sendEmail}>
         <label>Name</label>
