@@ -1,6 +1,7 @@
 .contact {
   background-color: #f8f9fa;
-  width: 100%; }
+  width: 100%;
+  padding: 2rem; }
   .contact form {
     display: flex;
     flex-direction: column;
@@ -29,7 +30,8 @@
       width: 100%;
       max-width: 20rem;
       align-self: self-start;
-      font-size: 1.8rem; }
+      font-size: 1.8rem;
+      cursor: pointer; }
   .contact h2 {
     font-weight: 500;
     font-size: 3.2rem;
