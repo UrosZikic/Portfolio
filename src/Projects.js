@@ -19,14 +19,15 @@ export default function Projects() {
       </p>
       <Project
         src={projectImage}
-        alt={"portfolio website"}
-        head={"Portfolio"}
+        alt={"Nexcent"}
+        head={"Nexcent"}
         desc={
-          "Portfolio website is my private project with a minimalist design built in React"
+          "Nexcent is a business based pixel perfect website built from a free figma design."
         }
-        git={"https://github.com/UrosZikic/Portfolio"}
-        web={"https://uroszikic.github.io/Portfolio/"}
+        git={"https://github.com/UrosZikic/Nexcent"}
+        web={"https://uroszikic.github.io/Nexcent/"}
         position={"bottom"}
+        fit={"contain"}
       />
       <Project
         src={projectImage2}
@@ -38,6 +39,7 @@ export default function Projects() {
         git={"https://github.com/UrosZikic/Snow-prototype"}
         web={"https://uroszikic.github.io/Snow-prototype/"}
         position={"center"}
+        fit={"cover"}
       />
       <Project
         src={projectImage3}
@@ -49,6 +51,7 @@ export default function Projects() {
         git={"https://github.com/UrosZikic/Graxpo"}
         web={"https://uroszikic.github.io/Graxpo/"}
         position={"center"}
+        fit={"cover"}
       />
       <Project
         src={projectImage4}
@@ -60,6 +63,7 @@ export default function Projects() {
         git={"https://github.com/UrosZikic/OmniPhones"}
         web={"https://uroszikic.github.io/OmniPhones/"}
         position={"bottom"}
+        fit={"cover"}
       />
       <Project
         src={projectImage5}
@@ -71,15 +75,20 @@ export default function Projects() {
         git={"https://github.com/UrosZikic/Euro-Stats"}
         // web={"https://uroszikic.github.io/OmniPhones/"}
         position={"bottom"}
+        fit={"cover"}
       />
     </section>
   );
 }
 
-function Project({ src, alt, head, desc, git, web, position }) {
+function Project({ src, alt, head, desc, git, web, position, fit }) {
   return (
     <div className="project" id="projects">
-      <img src={src} alt={alt} style={{ objectPosition: position }} />
+      <img
+        src={src}
+        alt={alt}
+        style={{ objectPosition: position, objectFit: fit }}
+      />
       <div>
         <h3>{head}</h3>
         <p>{desc}</p>
