@@ -3,7 +3,7 @@ import React from "react";
 //import images
 import projectImage from "./images/project-1.png";
 import projectImage2 from "./images/project-2.jpg";
-import projectImage3 from "./images/project-3.jpg";
+import projectImage3 from "./images/project-3.png";
 import projectImage4 from "./images/project-4.jpg";
 import projectImage5 from "./images/project-4.png";
 // import styles
@@ -43,13 +43,13 @@ export default function Projects() {
       />
       <Project
         src={projectImage3}
-        alt={"Grapxo Website"}
-        head={"Grapxo"}
+        alt={"Movie Overview"}
+        head={"Moview Overview"}
         desc={
-          "Grapxo is a single pagewebsite built in html, css and javascript. Grapxo showcases many different sections ranging from a carousel to contact form"
+          "Film-overview utilizes TMDB API FILM-OVERVIEW is a show based website built on TMDB's API"
         }
-        git={"https://github.com/UrosZikic/Graxpo"}
-        web={"https://uroszikic.github.io/Graxpo/"}
+        git={"https://github.com/UrosZikic/film-overview"}
+        web={"https://uroszikic.github.io/film-overview/"}
         position={"center"}
         fit={"cover"}
       />
@@ -73,7 +73,7 @@ export default function Projects() {
           "This website provides general info on any European country as well as a table data containing info about the country's population, fertility, mortality and so on.. This website was built with JS API with PHP and SQL on the backend."
         }
         git={"https://github.com/UrosZikic/Euro-Stats"}
-        // web={"https://uroszikic.github.io/OmniPhones/"}
+        web={"https://euro-stats.000webhostapp.com/index.php"}
         position={"bottom"}
         fit={"cover"}
       />
