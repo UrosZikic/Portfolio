@@ -4,7 +4,7 @@ import React from "react";
 import projectImage from "./images/project-1.png";
 import projectImage2 from "./images/project-2.jpg";
 import projectImage3 from "./images/project-3.jpg";
-import projectImage4 from "./images/project-4.jpg";
+import projectImage4 from "./images/project-4.png";
 import projectImage5 from "./images/project-5.png";
 // import styles
 import "./styles/Projects.css";
@@ -46,7 +46,7 @@ export default function Projects() {
         alt={"Movie Overview"}
         head={"Moview Overview"}
         desc={
-          "Film-overview utilizes TMDB API FILM-OVERVIEW is a show based website built on TMDB's API"
+          "Film-overview utilizes TMDB API FILM-OVERVIEW is a show based website built on TMDB's API."
         }
         git={"https://github.com/UrosZikic/film-overview"}
         web={"https://uroszikic.github.io/film-overview/"}
@@ -55,15 +55,15 @@ export default function Projects() {
       />
       <Project
         src={projectImage4}
-        alt={"Omni Website"}
-        head={"Omni"}
+        alt={"ErrandEr Website"}
+        head={"ErrandEr"}
         desc={
-          "Omni is an e-commerce website project. Omni showcases typical online store features such as a carousel, a store page, categories, product pages and a contact form."
+          "ErrandEr is a task management app built in JavaScript. It provides crud capabilities, filtering tasks by priority as well as a theme toggle."
         }
-        git={"https://github.com/UrosZikic/OmniPhones"}
-        web={"https://uroszikic.github.io/OmniPhones/"}
+        git={"https://github.com/UrosZikic/ErrandEr"}
+        web={"https://uroszikic.github.io/ErrandEr/"}
         position={"bottom"}
-        fit={"cover"}
+        fit={"contain"}
       />
       <Project
         src={projectImage5}

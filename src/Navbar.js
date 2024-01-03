@@ -41,6 +41,7 @@ export default function Navbar() {
           children="Home"
           onClick={() => scrollToSection("home")}
         />
+
         <NavLinks
           link="#about"
           children="About"
