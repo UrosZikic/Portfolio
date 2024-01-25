@@ -19,15 +19,15 @@ export default function Projects() {
       </p>
       <Project
         src={projectImage}
-        alt={"Nexcent"}
-        head={"Nexcent"}
+        alt={"E-shop"}
+        head={"E-shop"}
         desc={
-          "Nexcent is a business based pixel perfect website built from a free figma design."
+          "E-shop is a simple e-commerce website designed for small businesses."
         }
-        git={"https://github.com/UrosZikic/Nexcent"}
-        web={"https://uroszikic.github.io/Nexcent/"}
-        position={"bottom"}
-        fit={"contain"}
+        git={"https://github.com/UrosZikic/E-shop"}
+        web={"https://project-eshooping.000webhostapp.com/"}
+        position={"center"}
+        fit={"cover"}
       />
       <Project
         src={projectImage2}
