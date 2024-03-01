@@ -13,7 +13,7 @@ export default function Home() {
 
   return (
     <section className="home" id="home">
-      <h1>Aspiring Front-End Developer</h1>
+      <h1>Aspiring Web Developer</h1>
       <p>Passionate about creating web applications that make a difference</p>
       <a href="#projects" onClick={() => scrollToSection("projects")}>
         Projects
